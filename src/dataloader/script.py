@@ -1,14 +1,13 @@
 from src.utils import ROOT_DIR
 from typing import Union
-from collections import defaultdict
 import re
+from src.dataclass.script import Script
 
 
 class ScriptParser:
     def __init__(self, script_path):
         self.script_path = script_path
-        self.speakers = defaultdict(int)
-        self.lines = []
+        self.lines: Script = Script([])
         self.parse()
 
     def combine_lines(self):
