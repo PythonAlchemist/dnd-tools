@@ -1,1 +1,9 @@
 .env
+
+
+# Builds
+*.egg-info/
+__pycache__/
+
+# Data
+data/
